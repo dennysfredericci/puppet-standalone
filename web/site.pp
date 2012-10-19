@@ -44,15 +44,21 @@ file { '/etc/tomcat7/tomcat-users.xml' :
 
 # Ruby Environment
 
+package { "ruby": ensure => purged }
+
+package { "ruby1.8": ensure => purged }
+
+package { 'rubygems': ensure => purged }
+
+package { 'libmysqlclient-dev' : ensure => installed }
+
+package { 'libpq-dev' : ensure => installed }
+
+package { 'rubygems1.9.1': ensure => installed }
+
 package { 'ruby1.9.3': ensure => installed }
 
-exec { "install_rvm":
-  command => 'curl -L https://get.rvm.io | bash -s stable --ruby',
-  path    => "/usr/bin/:/bin/"
-}
 
-
-package { 'rubygems': ensure => installed }
 
 package { 'thin':
     provider => 'gem',
