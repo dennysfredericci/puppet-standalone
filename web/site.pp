@@ -44,6 +44,7 @@ file { '/etc/tomcat7/tomcat-users.xml' :
 
 # Ruby Environment
 
+package { 'ruby1.9.3': ensure => installed }
 
 package { 'rubygems': ensure => installed }
 
