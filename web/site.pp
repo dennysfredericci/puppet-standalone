@@ -1,6 +1,12 @@
-package {
-	'nginx' : ensure => installed
+exec { "apt_update":
+    command => "/usr/bin/apt-get update"
 }
+
+
+package { 'build-essential' : ensure => installed }
+
+
+package { 'nginx' : ensure => installed }
 
 package { 'ssh' : 
 	ensure => installed
@@ -57,6 +63,8 @@ package { 'libpq-dev' : ensure => installed }
 package { 'rubygems1.9.1': ensure => installed }
 
 package { 'ruby1.9.3': ensure => installed }
+
+package { 'puppet': ensure => installed }
 
 
 
