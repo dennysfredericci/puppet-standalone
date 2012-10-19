@@ -64,8 +64,6 @@ package { 'rubygems1.9.1': ensure => installed }
 
 package { 'ruby1.9.3': ensure => installed }
 
-package { 'puppet': ensure => installed }
-
 
 
 package { 'thin':
