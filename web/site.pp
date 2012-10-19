@@ -1,3 +1,20 @@
+package {
+	'nginx' : ensure => installed
+}
+
+package { 'ssh' : 
+	ensure => installed
+}
+
+
+
+
+
+
+
+# Java Environment
+
+
 package { 
 	'default-jdk' : ensure => installed 
 }
@@ -20,12 +37,20 @@ file { '/etc/tomcat7/tomcat-users.xml' :
 }
 
 
-package {
-	'nginx' : ensure => installed
-}
 
-package { 'ssh' : 
-	ensure => installed
+
+
+
+
+# Ruby Environment
+
+
+package { 'rubygems': ensure => installed }
+
+package { 'thin':
+    provider => 'gem',
+    ensure => installed,
+    require => Package[[rubygems]]
 }
 
 
