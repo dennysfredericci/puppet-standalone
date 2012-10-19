@@ -47,7 +47,6 @@ file { '/etc/tomcat7/tomcat-users.xml' :
 
 
 
-
 # Ruby Environment
 
 package { "ruby": ensure => purged }
@@ -73,3 +72,6 @@ package { 'thin':
 }
 
 
+exec { "thin":
+    command => "/usr/local/bin/thin install"
+}
