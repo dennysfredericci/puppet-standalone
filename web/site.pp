@@ -46,9 +46,9 @@ file { '/etc/tomcat7/tomcat-users.xml' :
 
 package { 'ruby1.9.3': ensure => installed }
 
-exec { "change_ruby_path":
-  command => 'update-alternatives --config ruby',
-  path    => "/usr/sbin/:/bin/"
+exec { "install_rvm":
+  command => 'curl -L https://get.rvm.io | bash -s stable --ruby',
+  path    => "/usr/bin/:/bin/"
 }
 
 
