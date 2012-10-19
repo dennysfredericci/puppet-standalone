@@ -47,7 +47,8 @@ file { '/etc/tomcat7/tomcat-users.xml' :
 package { 'ruby1.9.3': ensure => installed }
 
 exec { "change_ruby_path":
-  command => 'update-alternatives --config ruby'
+  command => 'update-alternatives --config ruby',
+  path    => "/usr/sbin/:/bin/"
 }
 
 
