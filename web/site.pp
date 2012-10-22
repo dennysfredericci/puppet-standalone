@@ -59,9 +59,10 @@ package { 'libmysqlclient-dev' : ensure => installed }
 
 package { 'libpq-dev' : ensure => installed }
 
-package { 'rubygems1.9.1': ensure => installed }
-
-package { 'ruby1.9.3': ensure => installed }
+#removido pois deve ser instalado na init
+#
+#package { 'rubygems1.9.1': ensure => installed }
+#package { 'ruby1.9.3': ensure => installed }
 
 
 
