@@ -53,16 +53,15 @@ package { "ruby": ensure => purged }
 
 package { "ruby1.8": ensure => purged }
 
-# package { 'rubygems': ensure => purged }
+package { 'rubygems': ensure => purged }
 
 package { 'libmysqlclient-dev' : ensure => installed }
 
 package { 'libpq-dev' : ensure => installed }
 
-#removido pois deve ser instalado na init
-#
-#package { 'rubygems1.9.1': ensure => installed }
-#package { 'ruby1.9.3': ensure => installed }
+package { 'rubygems1.9.1': ensure => installed }
+
+package { 'ruby1.9.3': ensure => installed }
 
 
 
