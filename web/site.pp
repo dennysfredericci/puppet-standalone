@@ -53,7 +53,7 @@ package { "ruby": ensure => purged }
 
 package { "ruby1.8": ensure => purged }
 
-package { 'rubygems': ensure => purged }
+# package { 'rubygems': ensure => purged }
 
 package { 'libmysqlclient-dev' : ensure => installed }
 
