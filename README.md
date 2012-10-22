@@ -3,6 +3,8 @@ puppet-standalone
 
 Some puppet scripts to build a simple environment
 
+sudo apt-get install git-core
+
 sudo init.sh
 
 git clone  #this_repo
