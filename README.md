@@ -5,7 +5,7 @@ Some puppet scripts to build a simple environment
 
 sudo apt-get install git-core
 
-git clone #this_repo
+git clone https://github.com/dennysfredericci/puppet-standalone.git
 
 sudo init.sh
 
